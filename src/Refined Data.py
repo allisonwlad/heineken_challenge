@@ -275,6 +275,17 @@ metas.write.format('delta').mode('overwrite').option('overwriteschema', 'true').
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC <h3> Calcula atingimento de metas por produto por cliente 
+# MAGIC <p> A análise não se mostrou muto efetiva pois a amostra de metas enviada só tinha dados referentes a 2024 e 2025 de alguns produtos e a base de vendas enviada só tinha 43 clientes com registros em 2024, sem registros para 2025
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC select year(date) as data, count(distinct sk_customer) from xyz.ref.fact_sales group by year(date) order by year(date) desc ;
+
+# COMMAND ----------
+
 # MAGIC %sql
 # MAGIC -- Soma o volume total de vendas por marca e cliente
 # MAGIC WITH vendas_cliente_marca AS (
