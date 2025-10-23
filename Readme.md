@@ -6,5 +6,6 @@ notebooks -> Contains notebooks Raw, Common and Refined data
 
 src -> Source code in Python of Raw, Common and Refined data
 
+power bi -> VIsual Report
 
 ![Data Model](sales_metas_model.svg "Data Model")
